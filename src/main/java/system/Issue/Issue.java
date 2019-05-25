@@ -5,6 +5,7 @@ import system.observers.Publisher;
 import system.observers.Subject;
 import system.users.User;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Issue implements Publisher, Subject {
@@ -19,6 +20,8 @@ public class Issue implements Publisher, Subject {
     private IssueType type;
     private IssuePriority priority;
 
+
+    private List<Observer> observerList;
 
     public Issue(IssueBuilder builder) {
         this.id = Issue.idGenerator.incrementAndGet();
@@ -35,22 +38,23 @@ public class Issue implements Publisher, Subject {
 
     @Override
     public void publish() {
-        
+
     }
 
     @Override
     public void assingToSubject(Observer o) {
-
+    this.observerList.add(o);
     }
 
     @Override
     public void unassingFromSubject(Observer o) {
-
+        this.observerList.remove(o);
     }
 
     @Override
     public void notifyObservers() {
-
+        this.observerList.stream()
+                .forEach(observer -> observer.obsesrverv());
     }
 
     public static class IssueBuilder {
