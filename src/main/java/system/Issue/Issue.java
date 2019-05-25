@@ -5,8 +5,10 @@ import system.observers.Publisher;
 import system.observers.Subject;
 import system.users.User;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Function;
 
 public class Issue implements Publisher, Subject {
 
@@ -31,6 +33,11 @@ public class Issue implements Publisher, Subject {
         this.assignUser = builder.assignUser;
         this.type = builder.type;
         this.priority = builder.priority;
+        this.observerList = new ArrayList<>();
+    }
+    public void changeDescription(String newDescription){
+        this.description = newDescription;
+        this.publish();
     }
     public static IssueBuilder builder(){
         return new IssueBuilder();
@@ -38,7 +45,8 @@ public class Issue implements Publisher, Subject {
 
     @Override
     public void publish() {
-
+        System.out.println("Descriptions was modified");
+        notifyObservers();
     }
 
     @Override
@@ -54,7 +62,14 @@ public class Issue implements Publisher, Subject {
     @Override
     public void notifyObservers() {
         this.observerList.stream()
-                .forEach(observer -> observer.obsesrverv());
+                .forEach(observer -> {
+                    observer.notify(() -> {
+                    System.out.println("Issus with title = [" + this.title + "] has  changed");
+                });
+                });
+        Function<String, Integer> f = (String s) ->{
+            return Integer.valueOf(s);
+        };
     }
 
     public static class IssueBuilder {
