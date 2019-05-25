@@ -1,0 +1,6 @@
+
+Isquid:S1068"&Remove this unused "id" private field.(ÎÂ’„ÿÿÿÿÿ8¸ÎÖô®-
+Ksquid:S1068".Remove this unused "assignUser" private field.(ğÛ8¸ÎÖô®-
+Isquid:S1068""&Remove this unused "id" private field.(ôç¼Óşÿÿÿÿ8¸ÎÖô®-
+Ÿsquid:S1186*"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñŠ˜ï8¸ÎÖô®-
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÈŠúÿÿÿÿ8¸ÎÖô®-

@@ -1,0 +1,6 @@
+
+Osquid:S1444	"1Make this "public static idGenerator" field final(ÂúÈú8ËÕÎô®-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶Ê˜8ËÕÎô®-
+Fsquid:S3010"(Remove this assignment of "idGenerator".(ÀãÅÉ8ËÕÎô®-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(„ÕëÍ8ËÕÎô®-
+Œ"squid:ClassVariableVisibilityCheck	"WMake idGenerator a static final constant or non-public and provide accessors if needed.(ÂúÈú8ËÕÎô®-
