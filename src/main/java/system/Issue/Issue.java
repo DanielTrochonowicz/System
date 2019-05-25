@@ -67,9 +67,6 @@ public class Issue implements Publisher, Subject {
                     System.out.println("Issus with title = [" + this.title + "] has  changed");
                 });
                 });
-        Function<String, Integer> f = (String s) ->{
-            return Integer.valueOf(s);
-        };
     }
 
     public static class IssueBuilder {

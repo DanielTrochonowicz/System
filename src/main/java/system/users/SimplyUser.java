@@ -17,7 +17,7 @@ public class SimplyUser extends User {
     }
 
     @Override
-    public void obsesrverv(ObserverMethod p) {
+    public void notify(ObserverMethod p) {
         StringExpression msg = StringFormatter.format("User name = [%s] is notify", this.getName());
         System.out.println(msg.getValue());
         p.execute();

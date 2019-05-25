@@ -2,7 +2,7 @@ package system.Issue;
 
 public enum IssueType {
     CRITICAL("CRITICIAL"),
-    WORD("PRACA"),
+    WORK("PRACA"),
     ANALISIS("ANALIZA"),
     ERROR("ERROR");
 
